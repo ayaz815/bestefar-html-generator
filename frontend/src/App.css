@@ -1,0 +1,24 @@
+/* styles.css */
+html,
+body {
+  overflow: hidden;
+}
+
+.page-transition-enter {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.page-transition-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 500ms ease-out, opacity 500ms ease-out;
+}
+.page-transition-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.page-transition-exit-active {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 500ms ease-out, opacity 500ms ease-out;
+}
