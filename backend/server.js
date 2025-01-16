@@ -8,7 +8,7 @@ const JSZip = require("jszip");
 const app = express();
 app.use(
   cors({
-    origin: ["https://bestefar-html-generator-backend.vercel.app/"],
+    origin: ["https://bestefar-html-generator-backend.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
