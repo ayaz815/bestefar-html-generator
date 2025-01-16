@@ -6,7 +6,13 @@ const fs = require("fs");
 const JSZip = require("jszip");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://bestefar-html-generator-backend.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // Multer setup to handle music file uploads_
