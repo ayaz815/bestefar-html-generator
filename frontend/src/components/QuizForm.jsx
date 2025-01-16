@@ -39,7 +39,7 @@ const QuizForm = () => {
 
         // Upload music file dynamically based on page number
         await axios.post(
-          `http://localhost:3000/upload-music/${currentPage}`,
+          `https://bestefar-html-generator-kr5n.vercel.app/upload-music/${currentPage}`,
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -79,7 +79,7 @@ const QuizForm = () => {
 
   const handleExportZip = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/download-zip", {
+      const response = await axios.get("https://bestefar-html-generator-kr5n.vercel.app/download-zip", {
         responseType: "blob", // Ensure we get the file as a blob
       });
 
